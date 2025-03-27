@@ -124,8 +124,6 @@ body {
 }
 
 .top-nav {
-    position: absolute;
-    z-index: 5;
     display: flex;
     column-gap: 51px;
     background-color: #BCEC30;
@@ -170,6 +168,7 @@ body {
     line-height: 32px;
     margin-top: 24px;
 }
+
 
 .middle-about__collection {
     margin-top: 72px;
