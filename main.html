@@ -14,21 +14,24 @@
 <body>
     <!--Шапка-->
     <div class="top">
-        <img class="top__decor top__decor--1" src="../img/bigstar.png" alt="">
-        <img class="top__decor top__decor--2" src="../img/Star 2.png" alt="">
-        <img class="top__decor top__decor--3" src="../img/Star 3.png" alt="">
-        <img class="top__decor top__decor--4" src="../img/Star 4.png" alt="">
-        <img class="top__decor top__decor--5" src="../img/Star 5.png" alt="">
+        <img class="top__decor top__decor--2" src="../img/Star2.png" alt="">
+        <img class="top__decor top__decor--3" src="../img/Star3.png" alt="">
+        <img class="top__decor top__decor--4" src="../img/Star4.png" alt="">
+        <img class="top__decor top__decor--5" src="../img/Star5.png" alt="">
         <header class="top-header center">
             <h1 class="top-header__title">Добро пожаловать на мой сайт мини-игр</h1>
             <h3 class="top-header__phras">Тебе предстоит пройти несколько увлекательных игр. Если готов, нажимай
                 <span class="top-header__phras--bold">«Поехали!»</span> и <span
                     class="top-header__phras--bold">приступай</span>.
             </h3>
-            <button class="button">Поехали!</button>
+            <button class="button">
+                <a class="link" href="#about">
+                    Поехали!
+                </a>
+            </button>
         </header>
-        <!--Движущаяся строка-->
     </div>
+    <!--Движущаяся строка-->
     <section>
         <nav class="top-nav">
             <div class="top-nav__games">ВИКТОРИНА</div><img src="../img/Star.png" alt="">
@@ -42,66 +45,72 @@
     <!--Контент-->
     <div class="middle">
         <!--Об играх-->
-        <div class="middle-about center">
+        <div id="about" class="middle-about center">
             <h1 class="middle-about__title">Об играх</h1>
             <h3 class="middle-about__phras">В моей коллекции представлено 6 игр на разные темы. <br>Игры несложные — в
                 них может поиграть каждый. <br>Все игры доступны для пользования.</h3>
             <!--Игры-->
             <div class="middle-about__collection">
                 <!--Игра 1-->
-                <article class="middle-about__collection-game">
-                    <a class="game" href=""></a>
-                    <img class="game-img" src="../img/game1.jpg" alt="">
-                    <div class="game-botton">
-                        <div class="game-number">Игра № 1</div>
-                        <h2 class="game-name">Угадай число</h2>
-                    </div>
-                </article>
+                <a class="game" href="">
+                    <article class="middle-about__collection-game middle-about__collection-game--short">
+                        <img class="game-img" src="../img/game1.jpg" alt="">
+                        <div class="game-botton">
+                            <div class="game-number">Игра № 1</div>
+                            <h2 class="game-name">Угадай число</h2>
+                        </div>
+                    </article>
+                </a>
                 <!--Игра 2-->
-                <article class="middle-about__collection-game">
-                    <a class="game" href=""></a>
-                    <img class="game-img" src="../img/game2.jpg" alt="">
-                    <div class="game-botton">
-                        <div class="game-number">Игра № 2</div>
-                        <h2 class="game-name">Простая арифметика</h2>
-                    </div>
-                </article>
+                <a class="game" href="">
+                    <article class="middle-about__collection-game">
+                        <img class="game-img" src="../img/game2.jpg" alt="">
+                        <div class="game-botton">
+                            <div class="game-number">Игра № 2</div>
+                            <h2 class="game-name">Простая арифметика</h2>
+                        </div>
+                    </article>
+                </a>
                 <!--Игра 3-->
-                <article class="middle-about__collection-game">
-                    <a class="game" href=""></a>
-                    <img class="game-img" src="../img/game3.jpg" alt="">
-                    <div class="game-botton">
-                        <div class="game-number">Игра № 3</div>
-                        <h2 class="game-name">Переверни текст</h2>
-                    </div>
-                </article>
+                <a class="game" href="">
+                    <article class="middle-about__collection-game middle-about__collection-game--short">
+                        <img class="game-img" src="../img/game3.jpg" alt="">
+                        <div class="game-botton">
+                            <div class="game-number">Игра № 3</div>
+                            <h2 class="game-name">Переверни текст</h2>
+                        </div>
+                    </article>
+                </a>
                 <!--Игра 4-->
-                <article class="middle-about__collection-game">
-                    <a class="game" href=""></a>
-                    <img class="game-img" src="../img/game4.jpg" alt="">
-                    <div class="game-botton">
-                        <div class="game-number">Игра № 4</div>
-                        <h2 class="game-name">Камень, ножницы,<br> бумага</h2>
-                    </div>
-                </article>
+                <a class="game" href="">
+                    <article class="middle-about__collection-game middle-about__collection-game--long">
+                        <img class="game-img" src="../img/game4.jpg" alt="">
+                        <div class="game-botton">
+                            <div class="game-number">Игра № 4</div>
+                            <h2 class="game-name">Камень, ножницы,<br> бумага</h2>
+                        </div>
+                    </article>
+                </a>
                 <!--Игра 5-->
-                <article class="middle-about__collection-game">
-                    <a class="game" href=""></a>
-                    <img class="game-img" src="../img/game5.jpg" alt="">
-                    <div class="game-botton">
-                        <div class="game-number">Игра № 5</div>
-                        <h2 class="game-name">Простая викторина</h2>
-                    </div>
-                </article>
+                <a class="game" href="">
+                    <article class="middle-about__collection-game">
+                        <img class="game-img" src="../img/game5.jpg" alt="">
+                        <div class="game-botton">
+                            <div class="game-number">Игра № 5</div>
+                            <h2 class="game-name">Простая викторина</h2>
+                        </div>
+                    </article>
+                </a>
                 <!--Игра 6-->
-                <article class="middle-about__collection-game">
-                    <a class="game" href=""></a>
-                    <img class="game-img" src="../img/game6.jpg" alt="">
-                    <div class="game-botton">
-                        <div class="game-number">Игра № 6</div>
-                        <h2 class="game-name">Генератор случайных цветов</h2>
-                    </div>
-                </article>
+                <a class="game" href="">
+                    <article class="middle-about__collection-game middle-about__collection-game--long">
+                        <img class="game-img" src="../img/game6.jpg" alt="">
+                        <div class="game-botton">
+                            <div class="game-number">Игра № 6</div>
+                            <h2 class="game-name">Генератор случайных цветов</h2>
+                        </div>
+                    </article>
+                </a>
             </div>
         </div>
         <!--
