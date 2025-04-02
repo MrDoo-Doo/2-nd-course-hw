@@ -42,7 +42,7 @@ let user = {
 alert("Имя: " + user.name + "\nВозраст: " + user.age + "\nПрава администратора: " + user.isAdmin);
 // Задание №10
 let userName = prompt("Как Вас зовут?");
-alert(userName);
+alert(`Привет, ${userName}!`);
 // Задание+
 let number = prompt("Загадайте любое число: ");
 let number1 = number * 2;
