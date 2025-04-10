@@ -1,4 +1,4 @@
-@media (max-width: 375px) {
+@media (max-width: 639px) {
     .top {
         height: 649px;
         background-image: url(../img/bigstarmini.png);
@@ -13,7 +13,7 @@
         padding-top: 147px;
         padding-left: 40px;
         margin-bottom: 131px;
-        width: 296px;
+        width: calc(100% - 80px);
         align-items: center;
     }
 
@@ -30,10 +30,14 @@
     }
 
     .button {
-        width: 285px;
+        width: 100%;
         font-size: 16px;
         line-height: 23px;
         margin-top: 12px;
+    }
+
+    .button--header {
+        width: 285px;
     }
 
     .top-nav {
