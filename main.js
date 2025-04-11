@@ -1,89 +1,89 @@
+// КОД
+let playgame1 = () => {
+    let questNumber = Math.floor(Math.random() * (100 - 1 + 1)) + 1;;
+    let userNumber = prompt('Мы загадали число от 1 до 100, угадайте число');
+    while (userNumber != questNumber) {
+        if (userNumber > questNumber) userNumber = prompt(`${userNumber} больше, чем загаданное число`);
+        else if (userNumber < questNumber) userNumber = prompt(`${userNumber} меньше, чем загаданное число`);
+    }
+    alert(`Молодец, мы действительно загадали число ${userNumber}`);
+}
+
+let playgame2 = () => {
+
+}
+
 // Задание №1
-let password = 'пароль';
-let check = prompt('Введите пароль:');
-if (password === check)
-    alert('Пароль введен верно');
-else
-    alert('Пароль введен неправильно');
+const min = (a, b) => {
+    if (a < b) return console.log(a);
+    else return console.log(b);
+}
+
+min(5, 67);
+min(19, 23);
 // Задание №2
-let c = prompt('Введите число большее 0 и меньшее 10:');
-if ((c > 0) && (c < 10))
-    alert('Верно');
-else
-    alert('Неверно');
+const isEven = (a) => {
+    if (a % 2 === 0) return console.log('Число чётное');
+    else return console.log('Число нечётное');
+}
+
+isEven(10);
+isEven(101);
 // Задание №3
-let d = prompt('Напишите одно любое число:');
-let e = prompt('Напишите другое любое число:');
-if ((d > 100) || (e > 100))
-    alert('Верно');
-else
-    alert('Неверно');
+const sqr = (a) => {
+    return a * a;
+}
+
+let numSqr = sqr(6);
+console.log(numSqr);
+console.log(sqr(7));
 // Задание №4
-let a = '2';
-let b = '3';
-alert(Number(a) + Number(b));
+const userAge = () => {
+    let age = prompt('Сколько Вам лет?');
+    if (age < 0) return alert('Вы ввели неправильное значение');
+    else if (age <= 12) return alert('Привет, друг!');
+    else if (age >= 13) return alert('Добро пожаловать!');
+}
+
+userAge();
 // Задание №5
-let monthNumber = Number(prompt('Введите номер месяца:'));
-switch (monthNumber) {
-    case 1:
-    case 2:
-    case 12:
-        alert('Это зима');
-        break;
-    case 3:
-    case 4:
-    case 5:
-        alert('Это весна');
-        break;
-    case 6:
-    case 7:
-    case 8:
-        alert('Это лето');
-        break;
-    case 9:
-    case 10:
-    case 11:
-        alert('Это осень');
-        break;
-    default:
-        alert('Нет такого месяца');
+const num = (a, b) => {
+    if (isNaN(a) || isNaN(b)) console.log('Одно или оба значения не являются числом');
+    else console.log(a * b);
 }
-// Задание №1+
-let num = prompt('Пожалуйста, введите любое число:');
-let nn = isNaN(num);
-if (nn == false) {
-    (num % 2 == 0) ? alert('Это число чётное') : alert('Это число нечётное');
+
+num(14, 'hello');
+num(3, 7);
+// Задание №6
+const isNum = () => {
+    let a = prompt('Введите число');
+    if (isNaN(a)) console.log('Переданный параметр не является числом');
+    else console.log(a + ' в кубе равняется ' + a * a * a);
 }
-else alert('Это не число');
-// Задание №2+
-let clientOS = prompt('Какая ОС у клиента (0/1):');
-if (clientOS == 0) {
-    alert('Установите версию приложения для iOS по ссылке');
+
+isNum();
+// Задание №7
+function getArea() {
+    return this.radius * this.radius * 3.14;
 }
-else if (clientOS == 1) {
-    alert('Установите версию приложения для Android по ссылке');
+
+function getPerimeter() {
+    return 2 * this.radius * 3.14;
 }
-else {
-    alert('Ошибка');
+
+const circle1 = {
+    radius: 5,
+    area: getArea,
+    perimeter: getPerimeter
 }
-// Задание №3+
-let clientYear = prompt('Какого года Ваш телефон:');
-if (clientOS == 0) {
-    if (clientYear < 2015) {
-        alert('Установите облегченную версию приложения для iOS по ссылке');
-    }
-    if (clientYear >= 2015) {
-        alert('Установите версию приложения для iOS по ссылке');
-    }
+
+let circle2 = {
+    radius: 3,
+    area: getArea,
+    perimeter: getPerimeter
 }
-else if (clientOS == 1) {
-    if (clientYear < 2015) {
-        alert('Установите облегченную версию приложения для Android по ссылке');
-    }
-    if (clientYear >= 2015) {
-        alert('Установите версию приложения для Android по ссылке');
-    }
-}
-else {
-    alert('Ошибка');
-}
+
+console.log(`Площадь первого круга равна ${circle1.area()}`);
+console.log(`Периметр первого круга равна ${circle1.perimeter()}`);
+console.log(`Площадь второго круга равна ${circle2.area()}`);
+console.log(`Периметр второго круга равна ${circle2.perimeter()}`);
