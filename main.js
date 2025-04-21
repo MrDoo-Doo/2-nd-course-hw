@@ -1,7 +1,7 @@
 // КОД
 
 // Мини-игра №1
-let playgame1 = () => {
+const playgame1 = () => {
     let questNumber = Math.floor(Math.random() * (100 - 1 + 1)) + 1;;
     let userNumber = prompt('Мы загадали число от 1 до 100, угадайте число');
     while (userNumber != questNumber) {
@@ -12,7 +12,7 @@ let playgame1 = () => {
 }
 
 // Мини-игра №2
-let playgame2 = () => {
+const playgame2 = () => {
     let answer = 0, variableFirst = 0, variableSecond = 0, operation = '+';
     variableFirst = randomNum();
     variableSecond = randomNum();
@@ -39,20 +39,20 @@ let playgame2 = () => {
     else alert(`Неправильно, ответ: ${answer}`)
 }
 
-let randomNum = () => {
+const randomNum = () => {
     return Math.floor(Math.random() * 10);
 }
 
-let randomMov = () => {
+const randomMov = () => {
     const operations = ["-", "+", "×", ":"];
     let operation = operations[Math.floor(Math.random() * 4)];
     return operation;
 }
 
 // Мини-игра №3
-let playgame3 = () => {
-    userText = prompt('Введите текст');
-    userTextArr = userText.split('');
+const playgame3 = () => {
+    let userText = prompt('Введите текст');
+    const userTextArr = userText.split('');
     userTextArr.reverse();
     reverseText = userTextArr.join('');
     alert(reverseText);
@@ -62,7 +62,7 @@ let playgame3 = () => {
 
 
 // Мини-игра №5
-let playgame5 = () => {
+const playgame5 = () => {
     const quiz = [
         {
             question: "Сколько морей омывают Балканский полуостров?",

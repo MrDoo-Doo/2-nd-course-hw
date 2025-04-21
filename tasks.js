@@ -49,8 +49,9 @@ let Date8 = new Date();
 console.log(Date8);
 // Задание №9
 let currentDate = new Date();
-let inDays = +currentDate + 73 * 24 * 60 * 60 * 1000;
-let futureDate = new Date(inDays);
+//let inDays = +currentDate + 73 * 24 * 60 * 60 * 1000;
+let futureDate = new Date(currentDate);
+futureDate.setDate(currentDate.getDate() + 73);
 console.log(futureDate);
 // Задание №10
 const DateFun = () => {
