@@ -1,67 +1,81 @@
 // Задание №1
-let strok1 = 'js'
-console.log(strok1.toUpperCase());
+const people = [
+    { name: 'Глеб', age: 29 },
+    { name: 'Анна', age: 17 },
+    { name: 'Олег', age: 7 },
+    { name: 'Оксана', age: 47 }
+];
+
+console.log(people.sort((a, b) => a.age - b.age));
 // Задание №2
-const strokFunc = (arr, model) => {
-    arr.forEach(el => {
-        arrNew = arr.filter(el => el.toLowerCase().startsWith(model.toLowerCase()))
-    });
-    console.log(arrNew);
-}
-const mas2 = ['Кружка', 'Кружка-непроливайка', 'Стакан', 'Деревянная кружка'];
-let ref = 'кружка';
-strokFunc(mas2, ref);
-// Задание №3
-let number = 32.58884;
-console.log(Math.floor(number));
-console.log(Math.ceil(number));
-console.log(Math.round(number));
-// Задание №4
-const mas4 = [52, 53, 49, 77, 21, 32];
-console.log(Math.max(...mas4));
-console.log(Math.min(...mas4));
-// Задание №5
-const ranFun = () => {
-    ranNum = Math.round(Math.random() * 10);
-    console.log(ranNum);
-}
-ranFun();
-// Задание №6
-const ranMas = () => {
-    max = prompt('Введите максимальное число');
-    ranArr = [];
-    for (i = 0; i < max / 2; i++) {
-        ranArr[i] = Math.round(Math.random() * max);
+function isPositive(array) {
+    const arrReturn = [];
+    let j = 0;
+    for (i = 0; i < array.length; i++) {
+        if (array[i] > 0) {
+            arrReturn[j] = array[i];
+            j++;
+        }
     }
-    console.log(ranArr);
+    return arrReturn;
 }
-ranMas();
-// Задание №7
-const ranNumber = () => {
-    min = +prompt('Введите минимальное число');
-    max = +prompt('Введите максимальное число');
-    Num = Math.round(Math.random() * (max - min) + min);
-    console.log(Num);
+
+function isMale(array) {
+    const arrReturn = [];
+    let i = 0;
+    array.forEach(el => {
+        if (el.gender == 'male') {
+            arrReturn[i] = el;
+            i++;
+        }
+    });
+    return arrReturn;
 }
-ranNumber();
-// Задание №8
-let Date8 = new Date();
-console.log(Date8);
-// Задание №9
-let currentDate = new Date();
-let inDays = +currentDate + 73 * 24 * 60 * 60 * 1000;
-let futureDate = new Date(inDays);
-console.log(futureDate);
-// Задание №10
-const DateFun = () => {
-    DateToday = new Date();
-    dayweek = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг",
-        "Пятница", "Суббота"];
-    months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
-        "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
-    fullDate = "Дата: " + DateToday.getDate() + " " + months[DateToday.getMonth()] + " " + DateToday.getFullYear() + " — это " + dayweek[DateToday.getDay()];
-    fullTime = "Время: " + DateToday.getHours() + ":" + DateToday.getMinutes() + ":" + DateToday.getSeconds();
-    console.log(fullDate);
-    console.log(fullTime);
+function filter(mas, callback) {
+    return callback(mas);
 }
-console.log(DateFun());
+
+const people2 = [
+    { name: 'Глеб', gender: 'male' },
+    { name: 'Анна', gender: 'female' },
+    { name: 'Олег', gender: 'male' },
+    { name: 'Оксана', gender: 'female' }
+];
+
+console.log(filter([3, -4, 1, 9], isPositive));
+console.log(filter(people2, isMale));
+
+// Задание №3
+let intervalTimer = setInterval(() => {
+    currentDate = new Date();
+    console.log(currentDate)
+}, 3000);
+
+setTimeout(() => {
+    clearInterval(intervalTimer);
+    console.log('30 секунд прошло');
+}, 30000);
+
+// Задание №4
+function delayForSecondTask4(callback) {
+    setTimeout(callback(), 1000);
+}
+
+delayForSecondTask4(function () {
+    console.log('Привет, Глеб!');
+})
+
+// Задание №5
+function delayForSecondTask5(cb) {
+    setTimeout(() => {
+        console.log('Прошла одна секунда');
+        if (cb) { cb(); }
+    }, 1000)
+}
+
+function sayHi(name) {
+    console.log(`Привет, ${name}!`);
+}
+
+// Нужно изменить код ниже:
+delayForSecondTask5(() => sayHi('Глеб'));
