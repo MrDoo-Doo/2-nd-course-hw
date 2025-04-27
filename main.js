@@ -59,7 +59,45 @@ let playgame3 = () => {
 }
 
 // Мини-игра №4
-
+let playgame4 = () => {
+    const RSP = ["камень", "ножницы", "бумага"];
+    userChoice = prompt('Поиграем в Камень, Ножницы, Бумагу \nНапишите, что вы выбрали:');
+    let i = Math.floor(Math.random() * 3);
+    if (RSP[i] === userChoice.toLowerCase()) {
+        alert(`Ваш выбор: ${userChoice} \nНаш выбор: ${RSP[i]} \nРезультат: Ничья (* ^ ω ^)`);
+    }
+    else if (userChoice.toLowerCase() == "камень") {
+        switch (i) {
+            case 1:
+                alert(`Ваш выбор: ${userChoice} \nНаш выбор: ${RSP[i]}` + "\nРезультат: Вы выиграли (´• ω •`)");
+                break;
+            default:
+                alert(`Ваш выбор: ${userChoice} \nНаш выбор: ${RSP[i]} \nРезультат: Мы выиграли (◕‿◕)`);
+                break;
+        }
+    }
+    else if (userChoice.toLowerCase() == "ножницы") {
+        switch (i) {
+            case 2:
+                alert(`Ваш выбор: ${userChoice} \nНаш выбор: ${RSP[i]} \nРезультат: Мы проиграли (ノ°益°)ノ`);
+                break;
+            default:
+                alert(`Ваш выбор: ${userChoice} \nНаш выбор: ${RSP[i]} \nРезультат: Вы проиграли (╯︵╰,)`);
+                break;
+        }
+    }
+    else if (userChoice.toLowerCase() == "бумага") {
+        switch (i) {
+            case 0:
+                alert(`Ваш выбор: ${userChoice} \nНаш выбор: ${RSP[i]} \nРезультат: Вы победили ＼(＾▽＾)／ `);
+                break;
+            default:
+                alert(`Ваш выбор: ${userChoice} \nНаш выбор: ${RSP[i]} \nРезультат: Мы победили (￢‿￢ )`);
+                break;
+        }
+    }
+    else alert('Похоже, вы написали, что-то не то (⌒_⌒;)');
+}
 
 // Мини-игра №5
 let playgame5 = () => {
@@ -92,3 +130,5 @@ let playgame5 = () => {
     }
     alert(`Количество правильных ответов: ${countTrue} из ${quiz.length}`);
 }
+
+// Мини-игра №6
