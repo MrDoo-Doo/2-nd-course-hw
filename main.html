@@ -19,7 +19,7 @@
         <img class="top__decor top__decor--4" src="../img/Star4.png" alt="">
         <img class="top__decor top__decor--5" src="../img/Star5.png" alt="">
         <header class="top-header center">
-            <h1 class="top-header__title">Добро пожаловать на мой сайт мини-игр</h1>
+            <h1 class="top-header__title">Добро пожаловать <br> на мой сайт мини-игр</h1>
             <h3 class="top-header__phras">Тебе предстоит пройти несколько увлекательных игр. Если готов, нажимай
                 <span class="top-header__phras top-header__phras--bold">«Поехали!»</span> и <span
                     class="top-header__phras top-header__phras--bold">приступай</span>.
@@ -45,7 +45,7 @@
         </nav>
     </section>
     <!--Контент-->
-    <div class="middle">
+    <div class="middle" id="color">
         <!--Об играх-->
         <section id="about" class="game-group center about">
             <h1 class="game-group__title">Об играх</h1>
@@ -56,7 +56,7 @@
                 <!--Игра 1-->
                 <a class="game" href="#game1">
                     <article class="game__item game__item--short">
-                        <img class="game__item-img" src="../img/game1.jpg" alt="">
+                        <img class="game-box__img" src="../img/game1.jpg" alt="">
                         <div class="game__item-botton">
                             <div class="game__item-number">Игра № 1</div>
                             <h2 class="game__item-name">Угадай число</h2>
@@ -66,7 +66,7 @@
                 <!--Игра 2-->
                 <a class="game" href="#game2">
                     <article class="game__item">
-                        <img class="game__item-img" src="../img/game2.jpg" alt="">
+                        <img class="game-box__img" src="../img/game2.jpg" alt="">
                         <div class="game__item-botton">
                             <div class="game__item-number">Игра № 2</div>
                             <h2 class="game__item-name">Простая арифметика</h2>
@@ -76,7 +76,7 @@
                 <!--Игра 3-->
                 <a class="game" href="#game3">
                     <article class="game__item game__item--short">
-                        <img class="game__item-img" src="../img/game3.jpg" alt="">
+                        <img class="game-box__img" src="../img/game3.jpg" alt="">
                         <div class="game__item-botton">
                             <div class="game__item-number">Игра № 3</div>
                             <h2 class="game__item-name">Переверни текст</h2>
@@ -86,7 +86,7 @@
                 <!--Игра 4-->
                 <a class="game" href="#game4">
                     <article class="game__item game__item--long">
-                        <img class="game__item-img" src="../img/game4.jpg" alt="">
+                        <img class="game-box__img" src="../img/game4.jpg" alt="">
                         <div class="game__item-botton">
                             <div class="game__item-number">Игра № 4</div>
                             <h2 class="game__item-name">Камень, ножницы,<br> бумага</h2>
@@ -96,7 +96,7 @@
                 <!--Игра 5-->
                 <a class="game" href="#game5">
                     <article class="game__item">
-                        <img class="game__item-img" src="../img/game5.jpg" alt="">
+                        <img class="game-box__img" src="../img/game5.jpg" alt="">
                         <div class="game__item-botton">
                             <div class="game__item-number">Игра № 5</div>
                             <h2 class="game__item-name">Простая викторина</h2>
@@ -106,7 +106,7 @@
                 <!--Игра 6-->
                 <a class="game" href="#game6">
                     <article class="game__item game__item--long">
-                        <img class="game__item-img" src="../img/game6.jpg" alt="">
+                        <img class="game-box__img" src="../img/game6.jpg" alt="">
                         <div class="game__item-botton">
                             <div class="game__item-number">Игра № 6</div>
                             <h2 class="game__item-name">Генератор случайных цветов</h2>
@@ -122,17 +122,17 @@
                 <!--Игра 1-->
                 <article id="game1" class="game-box">
                     <div class="game-box__half">
-                        <h1 class="game-box__name">Угадай число</h1>
-                        <p class="game-box__phras">Попробуй угадать случайное число от 1 до 100.</p>
+                        <h2 class="game-box__name">Угадай число</h2>
+                        <p class="game-box__phras">Попробуй угадать случайное <br>число от 1 до 100.</p>
                         <button onclick="playgame1()" class="button">Играть!</button>
                     </div>
-                    <img class="game__item-img" src="../img/game_1.jpg" alt="">
+                    <img class="game-box__img" src="../img/game_1.jpg" alt="">
                 </article>
                 <!--Игра 2-->
                 <article id="game2" class="game-box">
-                    <img class="game__item-img" src="../img/game_2.jpg" alt="">
+                    <img class="game-box__img" src="../img/game_2.jpg" alt="">
                     <div class="game-box__half">
-                        <h1 class="game-box__name">Простая арифметика</h1>
+                        <h2 class="game-box__name">Простая арифметика</h2>
                         <p class="game-box__phras">Попробуй решить простые арифметические задачи.</p>
                         <button onclick="playgame2()" class="button">Играть!</button>
                     </div>
@@ -140,38 +140,38 @@
                 <!--Игра 3-->
                 <article id="game3" class="game-box">
                     <div class="game-box__half">
-                        <h1 class="game-box__name">Переверни текст</h1>
-                        <p class="game-box__phras">Попробуй ввести текст, который будет перевернут.</p>
+                        <h2 class="game-box__name">Переверни текст</h2>
+                        <p class="game-box__phras">Попробуй ввести текст, который <br>будет перевернут.</p>
                         <button onclick="playgame3()" class="button">Играть!</button>
                     </div>
-                    <img class="game__item-img" src="../img/game_3.jpg" alt="">
-                </article>
-                <!--Игра 5-->
-                <article id="game5" class="game-box">
-                    <img class="game__item-img" src="../img/game_4.jpg" alt="">
-                    <div class="game-box__half">
-                        <h1 class="game-box__name">Викторина</h1>
-                        <p class="game-box__phras">Отвечай на вопросы викторины с вариантами ответов.</p>
-                        <button onclick="playgame5()" class="button">Играть!</button>
-                    </div>
+                    <img class="game-box__img" src="../img/game_3.jpg" alt="">
                 </article>
                 <!--Игра 4-->
                 <article id="game4" class="game-box">
+                    <img class="game-box__img" src="../img/game_5.jpg" alt="">
                     <div class="game-box__half">
-                        <h1 class="game-box__name">Камень, ножницы, бумага</h1>
-                        <p class="game-box__phras">Сыграй в популярную игру против компьютера.</p>
+                        <h2 class="game-box__name">Камень, <br>ножницы, <br>бумага</h2>
+                        <p class="game-box__phras">Сыграй в популярную игру <br>против компьютера.</p>
                         <button onclick="playgame4()" class="button">Играть!</button>
                     </div>
-                    <img class="game__item-img" src="../img/game_5.jpg" alt="">
+                </article>
+                <!--Игра 5-->
+                <article id="game5" class="game-box">
+                    <div class="game-box__half">
+                        <h2 class="game-box__name">Простая <br>викторина</h2>
+                        <p class="game-box__phras">Отвечай на вопросы викторины <br>с вариантами ответов.</p>
+                        <button onclick="playgame5()" class="button">Играть!</button>
+                    </div>
+                    <img class="game-box__img" src="../img/game_4.jpg" alt="">
                 </article>
                 <!--Игра 6-->
                 <article id="game6" class="game-box">
-                    <img class="game__item-img" src="../img/game_6.jpg" alt="">
+                    <img class="game-box__img" src="../img/game_6.jpg" alt="">
                     <div class="game-box__half">
-                        <h1 class="game-box__name">Генератор случайных цветов</h1>
+                        <h2 class="game-box__name">Генератор случайных <br>цветов</h2>
                         <p class="game-box__phras">Игра, в которой при клике на кнопку фон страницы меняется на
                             случайный.</p>
-                        <button class="button">Играть!</button>
+                        <button onclick="playgame6()" class="button">Играть!</button>
                     </div>
                 </article>
             </div>
@@ -181,7 +181,6 @@
     <footer class="bottom">Все права защищены.</footer>
 
     <script src="main.js"></script>
-    <script src="tasks.js"></script>
 </body>
 
 </html>

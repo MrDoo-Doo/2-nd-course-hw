@@ -2,7 +2,7 @@
 
 // Мини-игра №1
 let playgame1 = () => {
-    let questNumber = Math.floor(Math.random() * (100 - 1 + 1)) + 1;;
+    let questNumber = Math.floor(Math.random() * (100 - 1 + 1)) + 1;
     let userNumber = prompt('Мы загадали число от 1 до 100, угадайте число');
     while (userNumber != questNumber) {
         if (userNumber > questNumber) userNumber = prompt(`${userNumber} больше, чем загаданное число`);
@@ -132,3 +132,16 @@ let playgame5 = () => {
 }
 
 // Мини-игра №6
+let playgame6 = () => {
+    const colorBack = document.querySelector('.middle');
+    let Red, Green, Blue;
+    Red = colorRandom();
+    Green = colorRandom();
+    Blue = colorRandom();
+    colorBack.style.backgroundColor = `rgb(${Red}, ${Green}, ${Blue})`;
+}
+
+let colorRandom = () => {
+    let color = Math.floor(Math.random() * 256);
+    return color;
+}

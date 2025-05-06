@@ -48,12 +48,12 @@ body {
 }
 
 .top__decor--4 {
-    bottom: 149px;
+    bottom: 59px;
     right: 344px;
 }
 
 .top__decor--5 {
-    bottom: 225px;
+    bottom: 135px;
     right: 455px;
 }
 
@@ -129,7 +129,8 @@ body {
     font-size: 24px;
     font-weight: 600;
     line-height: 34px;
-    letter-spacing: 1px;
+    width: 247px;
+    //letter-spacing: 1px;
     margin-top: 24px;
 
     &:hover {
@@ -165,8 +166,9 @@ body {
 .middle {
     background-image: url(../img/GroupStar.png);
     background-repeat: no-repeat;
-    background-position: top 77px center;
-    background-color: #202027;
+    background-position: top 77px left 25px;
+    //background-position: top 77px center;
+    background-color: $backcolor;
     padding-bottom: 144px;
     padding-top: 94px;
 }
@@ -180,7 +182,7 @@ body {
         line-height: 78px;
 
         &--margin {
-            margin-top: 94px;
+            margin-top: 96px;
         }
     }
 
