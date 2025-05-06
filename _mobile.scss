@@ -27,13 +27,16 @@
         font-size: 16px;
         line-height: 20px;
         text-align: center;
+        margin-bottom: 12px;
     }
 
     .button {
         width: 100%;
         font-size: 16px;
-        line-height: 23px;
-        margin-top: 12px;
+        //margin-top: 16px;
+        // line-height: 23px;
+        line-height: 20px;
+        // margin-top: 2px;
     }
 
     .button--header {
@@ -62,11 +65,12 @@
 
     .middle {
         padding-top: 48px;
-        padding-bottom: 49px;
+        padding-bottom: 10px;
     }
 
     .game-collection {
         margin-top: 48px;
+        gap: 24px;
     }
 
     .game-group__title {
@@ -92,6 +96,7 @@
 
     .game-box__half {
         padding: 29px;
+        padding-bottom: 32px;
         width: calc(100% - 58px);
     }
 
