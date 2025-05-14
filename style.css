@@ -3,6 +3,10 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   background-color: #202027;
@@ -25,6 +29,17 @@ body {
 .link {
   text-decoration: none;
   color: inherit;
+  font-family: inherit;
+  background-color: #202027;
+  border-radius: 60px;
+  padding: 16px 65px;
+  border: 1px solid #202027;
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 34px;
+  width: 115px;
+  margin-top: 24px;
 }
 
 .top__decor {
@@ -100,21 +115,18 @@ body {
   flex-direction: column;
   align-items: flex-start;
 }
-
 .top-header__title {
   font-size: 64px;
   font-weight: 700;
   line-height: 78px;
   margin-bottom: 24px;
 }
-
 .top-header__phras {
   font-size: 24px;
   font-weight: 400;
   line-height: 32px;
   margin-bottom: 24px;
 }
-
 .top-header__phras--bold {
   font-weight: 600;
 }
@@ -132,23 +144,22 @@ body {
   width: 247px;
   margin-top: 24px;
 }
-
 .button:hover {
   background-color: #FFFFFF;
   color: #202027;
+  cursor: pointer;
 }
 
 .top-nav {
   display: flex;
   -moz-column-gap: 51px;
-  column-gap: 51px;
+       column-gap: 51px;
   background-color: #BCEC30;
   height: 90px;
   align-items: center;
   padding: 0 49px;
   overflow-x: hidden;
 }
-
 .top-nav__games {
   color: #000000;
   font-size: 30px;
@@ -158,11 +169,40 @@ body {
   white-space: nowrap;
   text-decoration: none;
 }
-
 .top-nav__star {
   width: 36px;
 }
 
+.scrollable {
+  overflow: hidden;
+}
+
+.item-animates {
+  width: -moz-fit-content;
+  width: fit-content;
+  animation: animate 25s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateX(0);
+  }
+  1% {
+    transform: translateX(0);
+  }
+  49% {
+    transform: translateX(calc(-3200px + 100vw));
+  }
+  50% {
+    transform: translateX(calc(-3200px + 100vw));
+  }
+  51% {
+    transform: translateX(calc(-3200px + 100vw));
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
 .middle {
   background-image: url(../img/GroupStar.png);
   background-repeat: no-repeat;
@@ -178,11 +218,9 @@ body {
   font-weight: 700;
   line-height: 78px;
 }
-
 .game-group__title--margin {
   margin-top: 96px;
 }
-
 .game-group__phras {
   color: #FFFFFF;
   font-size: 24px;
@@ -198,38 +236,37 @@ body {
   gap: 32px;
 }
 
-.game {
-  /* position: absolute;
-  top: 0;
-  left: 0;*/
-  text-decoration: none;
+.space_hide {
+  display: none;
 }
 
+.game {
+  text-decoration: none;
+}
 .game__item {
   display: flex;
   flex-direction: column;
   border-radius: 30px;
-  background-color: #fff;
+  background-color: #FFFFFF;
   width: 378px;
   position: relative;
-  /* height: 100%;*/
 }
-
 .game__item--long {
   margin-top: -39px;
 }
-
-.game-box__img {
+.game__item:hover {
+  transform: scale(1.05);
+  transition: transform 0.5s;
+}
+.game__item-img {
   border-radius: 30px;
 }
-
 .game__item-name {
   color: #000000;
   font-size: 32px;
   line-height: 39px;
   font-weight: 700;
 }
-
 .game__item-botton {
   display: flex;
   flex-direction: column;
@@ -237,7 +274,6 @@ body {
   row-gap: 16px;
   padding: 32px 32px 36px 32px;
 }
-
 .game__item-number {
   background-color: #F7F7F7;
   color: #000000;
@@ -250,17 +286,15 @@ body {
 
 .game-box {
   display: flex;
-  background-color: #fff;
+  background-color: #FFFFFF;
   border-radius: 30px;
   justify-content: space-between;
   width: 100%;
 }
-
 .game-box__half {
   padding: 48px;
   width: 50%;
 }
-
 .game-box__name {
   color: #000000;
   line-height: 59px;
@@ -268,7 +302,6 @@ body {
   font-weight: 700;
   margin-bottom: 24px;
 }
-
 .game-box__phras {
   color: #000000;
   line-height: 32px;
@@ -288,20 +321,134 @@ body {
   font-weight: 600;
 }
 
-/*.game__item--short {
-    height: 473px;
-}*/
-@media (max-width: 639px) {
+@media (max-width: 1280px) {
+  .center {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .game {
+    width: 30%;
+  }
+  .game__item {
+    height: 100%;
+    width: 100%;
+  }
+  .game__item--long {
+    margin-top: 0px;
+  }
+  .game__item-img--play {
+    width: 50%;
+  }
+  .game-box__name {
+    line-height: 48px;
+    font-size: 36px;
+  }
+  .game-box__phras {
+    line-height: 20px;
+    font-size: 16px;
+  }
+  .game-collection {
+    gap: 48px;
+    justify-content: center;
+  }
+}
+@media (max-width: 1040px) {
+  .top-header {
+    width: 700px;
+  }
+  .game {
+    width: 35%;
+  }
+  .game__item-name {
+    font-size: 28px;
+    line-height: 30px;
+  }
+  .game__item-number {
+    line-height: 18px;
+    font-size: 14px;
+  }
+  .game-box__half {
+    padding: 30px;
+  }
+  .game-box__phras {
+    line-height: 20px;
+    font-size: 16px;
+    margin-bottom: 0px;
+  }
+  .space {
+    display: none;
+  }
+  .space_hide {
+    display: block;
+  }
+}
+@media (max-width: 834px) {
+  .top-header {
+    width: 600px;
+  }
+  .top-header__title {
+    font-size: 48px;
+    line-height: 58px;
+    margin-bottom: 18px;
+  }
+  .top-header__phras {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 8px;
+  }
+  .link {
+    padding: 16px 55px;
+  }
+  .game-group__title {
+    font-size: 54px;
+    line-height: 60px;
+  }
+  .game-group__title--margin {
+    margin-top: 0;
+  }
+  .game-group__phras {
+    font-size: 20px;
+    line-height: 28px;
+    margin-top: 16px;
+  }
+  .middle {
+    padding-bottom: 54px;
+    padding-top: 54px;
+  }
+  .game-collection {
+    margin-top: 40px;
+  }
+  .game-box__name {
+    line-height: 36px;
+    font-size: 30px;
+    margin-bottom: 16px;
+  }
+  .game-box__phras {
+    margin-bottom: 0;
+  }
+  .space_hide {
+    display: none;
+  }
+  .button {
+    padding: 16px 45px;
+    font-size: 20px;
+    line-height: 28px;
+    width: 200px;
+    margin-top: 20px;
+  }
+  .about {
+    display: none;
+  }
+}
+@media (max-width: 680px) {
   .top {
     height: 649px;
     background-image: url(../img/bigstarmini.png);
   }
-
   .center {
     padding-left: 16px;
     padding-right: 16px;
   }
-
   .top-header {
     padding-top: 147px;
     padding-left: 40px;
@@ -309,125 +456,133 @@ body {
     width: calc(100% - 80px);
     align-items: center;
   }
-
   .top-header__title {
     font-size: 40px;
     line-height: 49px;
     text-align: center;
+    margin-bottom: 24px;
   }
-
   .top-header__phras {
     font-size: 16px;
     line-height: 20px;
     text-align: center;
     margin-bottom: 12px;
   }
-
+  .link {
+    padding: 16px 85px;
+    font-size: 16px;
+    line-height: 21px;
+    width: 112px;
+    text-align: center;
+  }
   .button {
     width: 100%;
     font-size: 16px;
     line-height: 20px;
+    margin-top: 25px;
   }
-
-  .button--header {
-    width: 285px;
-  }
-
   .top-nav {
     -moz-column-gap: 28px;
-    column-gap: 28px;
+         column-gap: 28px;
     height: 51px;
     padding: 0 24px;
   }
-
   .top-nav__games {
     font-size: 16px;
     line-height: 18px;
     letter-spacing: 4%;
   }
-
   .top-nav__star {
     width: 20px;
   }
-
   .about {
     display: none;
   }
-
   .middle {
     padding-top: 48px;
     padding-bottom: 10px;
   }
-
   .game-collection {
     margin-top: 48px;
     gap: 24px;
   }
-
   .game-group__title {
     font-size: 40px;
     line-height: 49px;
   }
-
   .game-group__title--margin {
     margin: 0;
   }
-
-  .game-box__name {
-    line-height: 39px;
-    font-size: 32px;
-    margin-bottom: 16px;
+  .game-box {
+    flex-direction: column-reverse;
   }
-
-  .game-box__phras {
-    line-height: 20px;
-    font-size: 16px;
-    margin-bottom: 8px;
-  }
-
   .game-box__half {
     padding: 29px;
     padding-bottom: 32px;
     width: calc(100% - 58px);
   }
-
-  .game-box {
-    flex-direction: column-reverse;
+  .game-box__name {
+    line-height: 39px;
+    font-size: 32px;
+    margin-bottom: 16px;
   }
-
+  .game-box__phras {
+    line-height: 20px;
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
   .game-box:nth-child(2n) {
     flex-direction: column;
   }
-
+  .game__item-img--play {
+    width: 100%;
+  }
+  .space_hide {
+    display: block;
+  }
   .top__decor--2 {
     width: 35px;
     top: 97px;
     left: 37px;
   }
-
   .top__decor--3 {
     width: 21px;
     top: 64px;
     left: 91px;
   }
-
   .top__decor--4 {
     width: 40px;
     bottom: 28px;
     right: 34px;
   }
-
   .top__decor--5 {
     width: 18px;
     bottom: 74px;
     right: 86px;
   }
-
   .bottom {
     font-size: 16px;
     line-height: 20px;
     height: 100px;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+  @keyframes animate {
+    0% {
+      transform: translateX(0);
+    }
+    1% {
+      transform: translateX(0);
+    }
+    49% {
+      transform: translateX(calc(-1760px + 100vw));
+    }
+    50% {
+      transform: translateX(calc(-1760px + 100vw));
+    }
+    51% {
+      transform: translateX(calc(-1760px + 100vw));
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+}/*# sourceMappingURL=style.css.map */

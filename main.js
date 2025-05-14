@@ -4,11 +4,13 @@
 let playgame1 = () => {
     let questNumber = Math.floor(Math.random() * (100 - 1 + 1)) + 1;
     let userNumber = prompt('Мы загадали число от 1 до 100, угадайте число');
-    while (userNumber != questNumber) {
-        if (userNumber > questNumber) userNumber = prompt(`${userNumber} больше, чем загаданное число`);
-        else if (userNumber < questNumber) userNumber = prompt(`${userNumber} меньше, чем загаданное число`);
+    if (userNumber !== null) {
+        while (userNumber != questNumber) {
+            if (userNumber > questNumber) userNumber = prompt(`${userNumber} больше, чем загаданное число`);
+            else if (userNumber < questNumber) userNumber = prompt(`${userNumber} меньше, чем загаданное число`);
+        }
+        alert(`Молодец, мы действительно загадали число ${userNumber}`);
     }
-    alert(`Молодец, мы действительно загадали число ${userNumber}`);
 }
 
 // Мини-игра №2
@@ -35,8 +37,10 @@ let playgame2 = () => {
             alert('Error');
     }
     let userAnswer = prompt(`Реши пример: ${variableFirst} ${operation} ${variableSecond}`);
-    if (userAnswer == answer) alert('Правильно')
-    else alert(`Неправильно, ответ: ${answer}`)
+    if (userAnswer !== null) {
+        if (userAnswer == answer) alert('Правильно')
+        else alert(`Неправильно, ответ: ${answer}`)
+    }
 }
 
 let randomNum = () => {
@@ -52,51 +56,55 @@ let randomMov = () => {
 // Мини-игра №3
 let playgame3 = () => {
     userText = prompt('Введите текст');
-    userTextArr = userText.split('');
-    userTextArr.reverse();
-    reverseText = userTextArr.join('');
-    alert(reverseText);
+    if (userText !== null) {
+        userTextArr = userText.split('');
+        userTextArr.reverse();
+        reverseText = userTextArr.join('');
+        alert(reverseText);
+    }
 }
 
 // Мини-игра №4
 let playgame4 = () => {
     const RSP = ["камень", "ножницы", "бумага"];
     userChoice = prompt('Поиграем в Камень, Ножницы, Бумагу \nНапишите, что вы выбрали:');
-    let i = Math.floor(Math.random() * 3);
-    if (RSP[i] === userChoice.toLowerCase()) {
-        alert(`Ваш выбор: ${userChoice} \nНаш выбор: ${RSP[i]} \nРезультат: Ничья (* ^ ω ^)`);
-    }
-    else if (userChoice.toLowerCase() == "камень") {
-        switch (i) {
-            case 1:
-                alert(`Ваш выбор: ${userChoice} \nНаш выбор: ${RSP[i]}` + "\nРезультат: Вы выиграли (´• ω •`)");
-                break;
-            default:
-                alert(`Ваш выбор: ${userChoice} \nНаш выбор: ${RSP[i]} \nРезультат: Мы выиграли (◕‿◕)`);
-                break;
+    if (userChoice !== null) {
+        let i = Math.floor(Math.random() * 3);
+        if (RSP[i] === userChoice.toLowerCase()) {
+            alert(`Ваш выбор: ${userChoice} \nНаш выбор: ${RSP[i]} \nРезультат: Ничья (* ^ ω ^)`);
         }
-    }
-    else if (userChoice.toLowerCase() == "ножницы") {
-        switch (i) {
-            case 2:
-                alert(`Ваш выбор: ${userChoice} \nНаш выбор: ${RSP[i]} \nРезультат: Мы проиграли (ノ°益°)ノ`);
-                break;
-            default:
-                alert(`Ваш выбор: ${userChoice} \nНаш выбор: ${RSP[i]} \nРезультат: Вы проиграли (╯︵╰,)`);
-                break;
+        else if (userChoice.toLowerCase() == "камень") {
+            switch (i) {
+                case 1:
+                    alert(`Ваш выбор: ${userChoice} \nНаш выбор: ${RSP[i]}` + "\nРезультат: Вы выиграли (´• ω •`)");
+                    break;
+                default:
+                    alert(`Ваш выбор: ${userChoice} \nНаш выбор: ${RSP[i]} \nРезультат: Мы выиграли (◕‿◕)`);
+                    break;
+            }
         }
-    }
-    else if (userChoice.toLowerCase() == "бумага") {
-        switch (i) {
-            case 0:
-                alert(`Ваш выбор: ${userChoice} \nНаш выбор: ${RSP[i]} \nРезультат: Вы победили ＼(＾▽＾)／ `);
-                break;
-            default:
-                alert(`Ваш выбор: ${userChoice} \nНаш выбор: ${RSP[i]} \nРезультат: Мы победили (￢‿￢ )`);
-                break;
+        else if (userChoice.toLowerCase() == "ножницы") {
+            switch (i) {
+                case 2:
+                    alert(`Ваш выбор: ${userChoice} \nНаш выбор: ${RSP[i]} \nРезультат: Мы проиграли (ノ°益°)ノ`);
+                    break;
+                default:
+                    alert(`Ваш выбор: ${userChoice} \nНаш выбор: ${RSP[i]} \nРезультат: Вы проиграли (╯︵╰,)`);
+                    break;
+            }
         }
+        else if (userChoice.toLowerCase() == "бумага") {
+            switch (i) {
+                case 0:
+                    alert(`Ваш выбор: ${userChoice} \nНаш выбор: ${RSP[i]} \nРезультат: Вы победили ＼(＾▽＾)／ `);
+                    break;
+                default:
+                    alert(`Ваш выбор: ${userChoice} \nНаш выбор: ${RSP[i]} \nРезультат: Мы победили (￢‿￢ )`);
+                    break;
+            }
+        }
+        else alert('Похоже, вы написали, что-то не то (⌒_⌒;)');
     }
-    else alert('Похоже, вы написали, что-то не то (⌒_⌒;)');
 }
 
 // Мини-игра №5
@@ -122,11 +130,14 @@ let playgame5 = () => {
     let userAnswer;
     for (i = 0; i < quiz.length; i++) {
         userAnswer = prompt(quiz[i].question + "\n" + quiz[i].options[0] + "\n" + quiz[i].options[1] + "\n" + quiz[i].options[2]);
-        if (userAnswer == quiz[i].correctAnswer) {
-            alert('Верно');
-            countTrue++;
+        if (userAnswer !== null) {
+            if (userAnswer == quiz[i].correctAnswer) {
+                alert('Верно');
+                countTrue++;
+            }
+            else alert('Неверно');
         }
-        else alert('Неверно');
+        else break;
     }
     alert(`Количество правильных ответов: ${countTrue} из ${quiz.length}`);
 }
@@ -145,3 +156,23 @@ let colorRandom = () => {
     let color = Math.floor(Math.random() * 256);
     return color;
 }
+//----------------------------
+/*
+let ranLine = document.querySelector('.top-nav');
+let ranItem = ranLine.querySelectorAll('.top-nav__games');
+
+const animate = () => {
+    //let element = document.getElementById("scrollable");
+    let element = document.querySelectorAll(".top-nav__games");
+    let pos = 0;
+    let id = setInterval(frame, 5);
+    function frame() {
+        if (pos === 350) {
+            clearInterval(id);
+        } else {
+            pos++;
+            element.style.left = pos + 'px';
+        }
+    }
+}
+*/
