@@ -1,4 +1,4 @@
-@media (max-width: 639px) {
+@media (max-width: 680px) {
     .top {
         height: 649px;
         background-image: url(../img/bigstarmini.png);
@@ -15,45 +15,52 @@
         margin-bottom: 131px;
         width: calc(100% - 80px);
         align-items: center;
+
+        &__title {
+            font-size: 40px;
+            line-height: 49px;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        &__phras {
+            font-size: 16px;
+            line-height: 20px;
+            text-align: center;
+            margin-bottom: 12px;
+        }
     }
 
-    .top-header__title {
-        font-size: 40px;
-        line-height: 49px;
-        text-align: center;
-    }
-
-    .top-header__phras {
+    .link {
+        padding: 16px 85px;
+        // border: 1px solid #202027;
         font-size: 16px;
-        line-height: 20px;
+        line-height: 21px;
+        width: 112px;
         text-align: center;
     }
 
     .button {
         width: 100%;
         font-size: 16px;
-        line-height: 23px;
-        margin-top: 12px;
-    }
-
-    .button--header {
-        width: 285px;
+        line-height: 20px;
+        margin-top: 25px;
     }
 
     .top-nav {
         column-gap: 28px;
         height: 51px;
         padding: 0 24px;
-    }
 
-    .top-nav__games {
-        font-size: 16px;
-        line-height: 18px;
-        letter-spacing: 4%;
-    }
+        &__games {
+            font-size: 16px;
+            line-height: 18px;
+            letter-spacing: 4%;
+        }
 
-    .top-nav__star {
-        width: 20px;
+        &__star {
+            width: 20px;
+        }
     }
 
     .about {
@@ -62,45 +69,58 @@
 
     .middle {
         padding-top: 48px;
-        padding-bottom: 49px;
+        padding-bottom: 10px;
     }
 
     .game-collection {
         margin-top: 48px;
+        gap: 24px;
     }
 
-    .game-group__title {
-        font-size: 40px;
-        line-height: 49px;
-    }
+    .game-group {
 
-    .game-group__title--margin {
-        margin: 0;
-    }
+        &__title {
+            font-size: 40px;
+            line-height: 49px;
 
-    .game-box__name {
-        line-height: 39px;
-        font-size: 32px;
-        margin-bottom: 16px;
-    }
-
-    .game-box__phras {
-        line-height: 20px;
-        font-size: 16px;
-        margin-bottom: 8px;
-    }
-
-    .game-box__half {
-        padding: 29px;
-        width: calc(100% - 58px);
+            &--margin {
+                margin: 0;
+            }
+        }
     }
 
     .game-box {
         flex-direction: column-reverse;
+
+        &__half {
+            padding: 29px;
+            padding-bottom: 32px;
+            width: calc(100% - 58px);
+        }
+
+        &__name {
+            line-height: 39px;
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+
+        &__phras {
+            line-height: 20px;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        &:nth-child(2n) {
+            flex-direction: column;
+        }
     }
 
-    .game-box:nth-child(2n) {
-        flex-direction: column;
+    .game__item-img--play {
+        width: 100%;
+    }
+
+    .space_hide {
+        display: block;
     }
 
     .top__decor--2 {
@@ -131,5 +151,31 @@
         font-size: 16px;
         line-height: 20px;
         height: 100px;
+    }
+
+    @keyframes animate {
+        0% {
+            transform: translateX(0);
+        }
+
+        1% {
+            transform: translateX(0);
+        }
+
+        49% {
+            transform: translateX(calc(-1760px + 100vw));
+        }
+
+        50% {
+            transform: translateX(calc(-1760px + 100vw));
+        }
+
+        51% {
+            transform: translateX(calc(-1760px + 100vw));
+        }
+
+        100% {
+            transform: translateX(0px);
+        }
     }
 }

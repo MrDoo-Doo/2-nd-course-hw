@@ -1,0 +1,160 @@
+@media (max-width: 1280px) {
+    .center {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .game {
+        width: 30%;
+
+        &__item {
+            height: 100%;
+            width: 100%;
+
+            &--long {
+                margin-top: 0px;
+            }
+        }
+
+        &__item-img--play {
+            width: 50%;
+        }
+    }
+
+    .game-box {
+
+        &__name {
+            line-height: 48px;
+            font-size: 36px;
+        }
+
+        &__phras {
+            line-height: 20px;
+            font-size: 16px;
+        }
+    }
+
+    .game-collection {
+        gap: 48px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1040px) {
+    .top-header {
+        width: 700px;
+    }
+
+    .game {
+        width: 35%;
+
+        &__item-name {
+            font-size: 28px;
+            line-height: 30px;
+        }
+
+        &__item-number {
+            line-height: 18px;
+            font-size: 14px;
+        }
+    }
+
+    .game-box {
+
+        &__half {
+            padding: 30px;
+        }
+
+        &__phras {
+            line-height: 20px;
+            font-size: 16px;
+            margin-bottom: 0px;
+        }
+    }
+
+    .space {
+        display: none;
+    }
+
+    .space_hide {
+        display: block;
+    }
+}
+
+@media (max-width: 834px) {
+    .top-header {
+        width: 600px;
+
+        &__title {
+            font-size: 48px;
+            line-height: 58px;
+            margin-bottom: 18px;
+        }
+
+        &__phras {
+            font-size: 20px;
+            line-height: 28px;
+            margin-bottom: 8px;
+        }
+    }
+
+    .link {
+        padding: 16px 55px;
+    }
+
+    .game-group {
+
+        &__title {
+            font-size: 54px;
+            line-height: 60px;
+
+            &--margin {
+                margin-top: 0;
+            }
+        }
+
+        &__phras {
+            font-size: 20px;
+            line-height: 28px;
+            margin-top: 16px;
+        }
+    }
+
+    .middle {
+        padding-bottom: 54px;
+        padding-top: 54px;
+    }
+
+    .game-collection {
+        margin-top: 40px;
+    }
+
+    .game-box {
+
+        &__name {
+            line-height: 36px;
+            font-size: 30px;
+            margin-bottom: 16px;
+        }
+
+        &__phras {
+            margin-bottom: 0;
+        }
+    }
+
+    .space_hide {
+        display: none;
+    }
+
+    .button {
+        padding: 16px 45px;
+        font-size: 20px;
+        line-height: 28px;
+        width: 200px;
+        margin-top: 20px;
+    }
+
+    .about {
+        display: none;
+    }
+}
