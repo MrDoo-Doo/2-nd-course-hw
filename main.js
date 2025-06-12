@@ -156,23 +156,3 @@ let colorRandom = () => {
     let color = Math.floor(Math.random() * 256);
     return color;
 }
-//----------------------------
-/*
-let ranLine = document.querySelector('.top-nav');
-let ranItem = ranLine.querySelectorAll('.top-nav__games');
-
-const animate = () => {
-    //let element = document.getElementById("scrollable");
-    let element = document.querySelectorAll(".top-nav__games");
-    let pos = 0;
-    let id = setInterval(frame, 5);
-    function frame() {
-        if (pos === 350) {
-            clearInterval(id);
-        } else {
-            pos++;
-            element.style.left = pos + 'px';
-        }
-    }
-}
-*/
